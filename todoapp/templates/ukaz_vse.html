@@ -1,0 +1,34 @@
+<!doctype html>
+<head>
+  <title>Hanji todo</title>
+</head>
+<body>
+  <h1>to do aplikace,ktera zaznamenava ukoly</h1>
+  <h2> Hanji todo umi spoustu veci, vyber si v menu co chces udelat</h2>
+  <h1> vsechny pripominky </h1>
+  <h3>
+    <p>Vsechny pripominky jsou: </p>
+    <ul>
+      {% for n in vse_pripominky %}
+      <li> {{n}} </li>
+      {% endfor %}
+    </ul>
+  </h3>
+  <h2> Zvol si dalsi akci</h2>
+  <h3>
+    <a href = "/nova_pripominka"><button type = "button" onclick = doplnit_funkci>
+    {{druhy_button}}
+    </button>
+  </h3>
+  <h3>
+    <a href = "/oznacit_splnena"><button type = "button" onclick = doplnit_funkci>
+    {{treti_button}}
+    </button>
+  </h3>
+  <h3>
+    <a href = "/konec"><button type = "button" onclick = doplnit_funkci>
+      {{ctvrty_button}}
+    </button>
+  </h3>
+</body>
+</html>
